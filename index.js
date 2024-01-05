@@ -1,14 +1,3 @@
-for (var i = 0; i < document.querySelectorAll(".drum").length;i++)
-{
-  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-    var buttoninnerHTML = this.innerHTML; // save innerHTML of the selector
-    callDrums(buttoninnerHTML);
-  });
-
-  document.addEventListener("keydown", function(event) {
-    callDrums(event.key);
-});
-
 function callDrums(buttoninnerHTML) {
     switch (buttoninnerHTML) {
       case "w":
@@ -47,9 +36,19 @@ function callDrums(buttoninnerHTML) {
         break;
       
       default: console.log(buttoninnerHTML);
-
     }
   }
+
+  for (var i = 0; i < document.querySelectorAll(".drum").length;i++)
+  {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+    var buttoninnerHTML = this.innerHTML; // save innerHTML of the selector
+    callDrums(buttoninnerHTML);
+  });
+
+  document.addEventListener("keydown", function(event) {
+    callDrums(event.key);
+  });
 }
 
 
