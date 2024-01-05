@@ -1,5 +1,5 @@
-function callDrums(buttoninnerHTML) {
-    switch (buttoninnerHTML) {
+function callDrums(key) {
+    switch (key) {
       case "w":
         var tom1 = new Audio("sounds/tom-1.mp3");
         tom1.play();
@@ -35,7 +35,7 @@ function callDrums(buttoninnerHTML) {
         kick.play();
         break;
       
-      default: console.log(buttoninnerHTML);
+      default: console.log(key);
     }
   }
 
